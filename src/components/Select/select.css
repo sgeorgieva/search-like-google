@@ -1,0 +1,46 @@
+.select {
+    position: absolute;
+    display: block;
+    text-align: left;
+    cursor: default;
+    -webkit-user-select: none;
+    width: 562px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.select-inner {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0 0 30px 30px;
+    border-style: solid;
+    border-color: #dcdcdc;
+    border-width: 0 2px 2px 2px;
+    padding-bottom: 4px;
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    outline: none;
+}
+.select-inner::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #dcdcdc;
+    height: 0.5px;
+    width: 95%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.select-list {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}

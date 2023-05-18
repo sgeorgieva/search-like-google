@@ -1,0 +1,119 @@
+.pagelist {
+  list-style: none;
+  color: rgb(29, 135, 255);
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  margin: 30px 0;
+  padding-top: 35px;
+}
+
+.pagelistprevious::before {
+  content: '<';
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: -35px;
+  color: rgb(29, 135, 255);
+  font-size: 20px;
+  transform: scale(0.7, 1.2);
+}
+
+.pagelistprevious::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -40px;
+  top: -35px;
+  width: 40px;
+  height: 40px;
+  background-image: url('../../images/g_letter.svg');
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+
+.pagelistfirst {
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+.pagelistfirst:hover,
+.pagelistnumber:hover,
+.pagelistprevious:hover,
+.pagelistnext:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.pagelistnumber::before, .pagelistfirst::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -2px;
+  top: -21px;
+  border-radius: 50px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  z-index: 3;
+}
+
+.pagelistnumber::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -6px;
+  top: -25px;
+  border-radius: 50px;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(255, 196, 0);
+  z-index: 2;
+}
+
+.pagelistfirst::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -6px;
+  top: -25px;
+  border-radius: 50px;
+  width: 18px;
+  height: 18px;
+  background-color: red;
+  z-index: 2;
+}
+
+.pagelist li {
+  margin-right: 15px;
+  position: relative;
+}
+
+.pagelistnext {
+  margin-left: 40px;
+  font-size: 13px;
+}
+
+.pagelistnext::before {
+  content: '>';
+  display: block;
+  position: absolute;
+  left: 5px;
+  top: -35px;
+  color: rgb(29, 135, 255);
+  font-size: 20px;
+  transform: scale(0.7, 1.2);
+}
+
+.pagelistnext::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -55px;
+  top: -40.5px;
+  width: 50px;
+  height: 50px;
+  background-image: url('../../images/gle.png');
+  background-repeat: no-repeat;
+  background-size: 48px;
+}
