@@ -1,5 +1,42 @@
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
 .header {
   color: #1C3267;
+}
+
+.wrapper {
+  position: relative;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+.wrapper > div:first-child {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.wrapper > div:nth-of-type(2) {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  /* width: 100%; */
+  /* height: 100%; */
+  transform: translateX(-50%);
 }
